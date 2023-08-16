@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // COMPONENTS //
 import App from './components/App';
 import ErrorPage from './components/ErrorPage';
-import FruitfulPage from './components/FruitfulPage';
+import Home from './components/Home';
 import TreeList from './components/TreeList';
 
 // LOADERS //
-import { getMulberryTrees } from './loaders'
+import { getTrees } from './loaders'
 
 const router = createBrowserRouter([
   {
@@ -21,12 +20,13 @@ const router = createBrowserRouter([
     children: [
       // children components of App that will show up in Outlet
       {
-        index: "true",
-        element: <FruitfulPage />
+        index: true,
+        element: <Home />
       },
       {
-        path: "trees",
-        element: <TreeList />
+        path: "find-fruit-trees",
+        element: <TreeList />,
+        loader: getTrees
       }
     ]
   }
