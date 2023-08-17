@@ -8,6 +8,7 @@ import App from './components/App';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import TreeList from './components/TreeList';
+import MyTrees from './components/MyTrees';
 
 // LOADERS //
 import { getTrees } from './loaders'
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
         path: "find-fruit-trees",
         element: <TreeList />,
         loader: getTrees
-      }
+      },
+      // {
+      //   path: "my-trees",
+      //   element: <MyTrees />,
+      // }
     ]
   }
 ])

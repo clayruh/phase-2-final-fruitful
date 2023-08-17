@@ -9,12 +9,11 @@ body {
 
 .link {
   text-decoration: none;
-  color: orange;
+  color: black;
 }
 
 .link:hover {
-  color: blue;
-  font-size: 1.5rem;
+  color: rgb(22, 100, 40);
   transition: .5s;
 }
 
@@ -28,7 +27,7 @@ nav a {
 }
 
 img {
-  width: 100px;
+  height: 100px;
   padding: 1em;
   filter: grayscale(100%);
 }
@@ -53,3 +52,12 @@ img:hover {
   flex-direction: column;
 }
 
+.fruit-tree {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.bookmark :hover {
+  color: rgb(62, 217, 27)!important;
+}
