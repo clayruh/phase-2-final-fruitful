@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.link {
+  text-decoration: none;
+  color: orange;
+}
+
+.link:hover {
+  color: blue;
+  font-size: 1.5rem;
+  transition: .5s;
+}
+
 nav {
   text-align: center;
   padding: 0.5em;
@@ -17,7 +28,14 @@ nav a {
 }
 
 img {
-  width: 200px;
+  width: 100px;
+  padding: 1em;
+  filter: grayscale(100%);
+}
+
+img:hover {
+  filter: none;
+  transition: 0.2s;
 }
 
 .main-header h1 {
@@ -30,7 +48,8 @@ img {
   flex-wrap: wrap;
 }
 
-.fruit-trees {
+.fruit-trees-nav {
   display: flex;
   flex-direction: column;
 }
+

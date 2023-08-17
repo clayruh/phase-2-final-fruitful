@@ -7,8 +7,8 @@ export default function Header() {
             <h1>FRUITful</h1>
             <h2></h2>
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/find-fruit-trees">Find Fruit Trees</Link>
+                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/find-fruit-trees">Find Fruit Trees</Link>
             </nav>
         </header>
     )
