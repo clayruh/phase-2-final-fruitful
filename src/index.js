@@ -8,10 +8,10 @@ import App from './components/App';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import TreeList from './components/TreeList';
-import MyTrees from './components/MyTrees';
+import MyTrees from './components/BookmarkedTree';
 
 // LOADERS //
-import { getTrees } from './loaders'
+import { getTrees, getBookmarkedTrees } from './loaders'
 
 const router = createBrowserRouter([
   {

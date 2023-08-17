@@ -3,17 +3,38 @@ import { useLoaderData } from 'react-router-dom'
 import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import MyTrees from './MyTrees'
+import BookmarkedTree from './BookmarkedTree'
 import icon from '../assets/tree-icon.png'
 
 export default function TreeList() {
-    const { mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees } = useLoaderData()
+    const { mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees, bTrees } = useLoaderData()
     const [trees, setTrees] = useState([])
 
     //----- for Bookmarking ------//
-    const [bookmarkedTrees, setBookmarkedTrees] = useState([])
-    const handleBookmark = (treeObj) => {
-        setBookmarkedTrees(prevbookmarkedTrees => [...prevbookmarkedTrees, treeObj])
+    const [bookmarkedTrees, setBookmarkedTrees] = useState(bTrees)
+    function addBookmarkedTree(newTree) {
+        setBookmarkedTrees(prevBookmarkedTrees => [...prevBookmarkedTrees, newTree])
+    }
+
+    function handleBookmark(treeObj) {
+        console.log(treeObj); 
+        const OPTIONS = {
+            method: 'POST',
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                spc_common: treeObj.spc_common,
+                latitude: treeObj.latitude,
+                longitude: treeObj.longitude,
+                address: treeObj.address,
+                boroname: treeObj.boroname,
+            })
+        }
+        fetch('http://localhost:3000/trees', OPTIONS)
+        .then(res => res.json())
+        .then(newTree => addBookmarkedTree(newTree))
     }
 
     // const mappedTrees = trees.map( treeObj => (
@@ -54,40 +75,41 @@ export default function TreeList() {
     return(
         <div className="find-container">
             <div className="fruit-trees-nav">
-                <div className="fruit-tree">
-                    <img src="https://www.pngmart.com/files/22/Mulberry-Transparent-PNG.png" alt="Mulberry Trees" onClick={() => setTrees(mulberryTrees)}></img>
+                {/* <TreeSelector name="Mulberry Trees" img="//" onClick={() => setTrees(mulberryTrees)} /> */}
+                <div className="fruit-tree" onClick={() => setTrees(mulberryTrees)}>
+                    <img src="https://www.pngmart.com/files/22/Mulberry-Transparent-PNG.png" alt="Mulberry Trees"></img>
                     <h4>Mulberry Trees</h4>
                 </div>
-                <div className="fruit-tree">
-                    <img src="https://as1.ftcdn.net/v2/jpg/00/73/95/36/1000_F_73953628_gpcjEKzD3gtxQ5ZucRLLjDuVQ2Bl9Kuf.jpg" alt="Ginkgo Trees" onClick={() => setTrees(ginkgoTrees)}></img>
+                <div className="fruit-tree" onClick={() => setTrees(ginkgoTrees)}>
+                    <img src="https://as1.ftcdn.net/v2/jpg/00/73/95/36/1000_F_73953628_gpcjEKzD3gtxQ5ZucRLLjDuVQ2Bl9Kuf.jpg" alt="Ginkgo Trees"></img>
                     <h4>Ginkgo Trees</h4>
                 </div>
-                <div className="fruit-tree">
-                    <img src="https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Amelanchier-alnifolia--Danny-Barron--CC-BY-NC-ND.jpg" alt="Serviceberry Trees" onClick={() => setTrees(serviceberryTrees)}></img>
+                <div className="fruit-tree" onClick={() => setTrees(serviceberryTrees)}>
+                    <img src="https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Amelanchier-alnifolia--Danny-Barron--CC-BY-NC-ND.jpg" alt="Serviceberry Trees"></img>
                     <h4>Serviceberry Trees</h4>
                 </div>
-                <div className="fruit-tree">
-                    <img src="https://media.istockphoto.com/id/152940679/photo/hawthorn-berries-with-leaves-on-stem.jpg?s=612x612&w=0&k=20&c=bIFXQM8-AERkXPx4JdqpO02kiKWb1uq2Et6UWf9eY_8=" alt="Hawthorn Trees" onClick={() => setTrees(hawthornTrees)}></img>
+                <div className="fruit-tree" onClick={() => setTrees(hawthornTrees)}>
+                    <img src="https://media.istockphoto.com/id/152940679/photo/hawthorn-berries-with-leaves-on-stem.jpg?s=612x612&w=0&k=20&c=bIFXQM8-AERkXPx4JdqpO02kiKWb1uq2Et6UWf9eY_8=" alt="Hawthorn Trees"></img>
                     <h4>Hawthorn Trees</h4>
                 </div>
-                <div className="fruit-tree">
-                    <img src="https://www.piercenativeplantsale.com/uploads/1/1/2/0/112044857/s236061467420380553_p240_i2_w960.jpeg" alt="Crabapple Trees" onClick={() => setTrees(crabappleTrees)}></img>
+                <div className="fruit-tree" onClick={() => setTrees(crabappleTrees)}>
+                    <img src="https://www.piercenativeplantsale.com/uploads/1/1/2/0/112044857/s236061467420380553_p240_i2_w960.jpeg" alt="Crabapple Trees"></img>
                     <h4>Crabapple Trees</h4>
                 </div>
-                <div className="fruit-tree">
-                    <img src="https://ae01.alicdn.com/kf/HTB1I2NUa5LrK1Rjy1zdq6ynnpXaC/Lote-1-45.jpg" alt="Hackberry Trees" onClick={() => setTrees(hackberryTrees)}></img>
+                <div className="fruit-tree" onClick={() => setTrees(hackberryTrees)}>
+                    <img src="https://ae01.alicdn.com/kf/HTB1I2NUa5LrK1Rjy1zdq6ynnpXaC/Lote-1-45.jpg" alt="Hackberry Trees"></img>
                     <h4>Hackberry Trees</h4>
                 </div>
             </div>
-            <div>
-                <MapContainer center={[40.74021106, -73.97738586]} zoom={13} style={{ width: '700px', height: '600px' }}>
+            <div className="map-and-bookmarks">
+                <MapContainer center={[40.74021106, -73.97738586]} zoom={13} style={{ width: '100%', height: '600px' }}>
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
                     />
                     {mapTreeMarkers}
                 </MapContainer>
-                <MyTrees bookmarkedTrees={bookmarkedTrees}/>
+                <BookmarkedTree bookmarkedTrees={bookmarkedTrees}/>
                 {/* {mappedTrees} */}
             </div>
         </div>

@@ -19,11 +19,11 @@ body {
 
 nav {
   text-align: center;
-  padding: 0.5em;
+  padding: 1.5em;
 }
 
 nav a {
-  padding: 0.5em;
+  padding: 2em;
 }
 
 img {
@@ -39,9 +39,16 @@ img:hover {
 
 .main-header h1 {
   text-align: center;
-  padding-left: 1rem;
 }
 
+.home {
+  text-align: center;
+  padding: 70px 0;
+  width: 70%;
+  margin: auto;
+}
+
+/* Buttons, map, and bookmarks flex container */
 .find-container {
   display: flex;
   flex-wrap: wrap;
@@ -50,7 +57,13 @@ img:hover {
 .fruit-trees-nav {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
+
+.map-and-bookmarks {
+  flex-grow: 1;
+}
+/* End of flex container */
 
 .fruit-tree {
   border: 1px solid #ccc;
@@ -59,5 +72,14 @@ img:hover {
 }
 
 .bookmark :hover {
-  color: rgb(62, 217, 27)!important;
+  color: rgb(140, 43, 14)!important;
+}
+
+.bookmarked-tree {
+  display: flex;
+}
+
+.bookmarked-tree-icon {
+  width: 50px;
+  height: auto;
 }
