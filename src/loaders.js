@@ -1,4 +1,7 @@
 export async function getTrees() {
+    const allResponse = await fetch('https://data.cityofnewyork.us/resource/5rq2-4hqu.json')
+    const allTrees = await allResponse.json()
+
     const mulberryResponse = await fetch('https://data.cityofnewyork.us/resource/5rq2-4hqu.json?spc_common=mulberry')
     const mulberryTrees = await mulberryResponse.json()
 
@@ -20,7 +23,7 @@ export async function getTrees() {
     const bookmarkedTreesRes = await fetch('http://localhost:3000/trees')
     const bTrees = await bookmarkedTreesRes.json()
 
-    return { mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees, bTrees }
+    return { allTrees, mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees, bTrees }
 }
 
 export async function getBookmarkedTrees() {

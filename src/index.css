@@ -1,25 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:wght@400;800&display=swap');
+
 body {
   margin: 0;
+  background-color: #00BF63;
+}
 
+h1 {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 4em;
+  letter-spacing: 0.06em;
+}
+
+p, h2, h3, h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+}
+
+a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
 }
 
 .link {
   text-decoration: none;
   color: black;
+  background-color: #C1FF72;
+  border: 1.5px solid;
+  border-radius: 25px;
+  margin: 1.2em;
 }
 
 .link:hover {
-  color: rgb(22, 100, 40);
+  background-color: black;
+  color: white;
   transition: .5s;
 }
 
 nav {
   text-align: center;
-  padding: 1.5em;
+  margin-bottom: 3em;
 }
 
 nav a {
-  padding: 2em;
+  padding: 0.5em 2em;
 }
 
 .main-header h1 {
@@ -28,9 +51,38 @@ nav a {
 
 .home {
   text-align: center;
+  font-size: 1.2em;
   padding: 70px 0;
   width: 70%;
   margin: auto;
+}
+
+.giphy-embed {
+  border-radius: 10px;
+  margin-bottom: 3em;
+}
+
+.created-by {
+  /* display: flex;
+  flex-wrap: wrap; */
+  margin: 2em;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: dotted;
+}
+
+.created-by img {
+  width: 130px;
+  height: 130px;
+  margin: 1em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.created-by h4 {
+  text-align: center;
+  margin: 1em 2em 2em 2em;
+  font-size: 0.8em;
 }
 
 /* Buttons, map, and bookmarks flex container */
@@ -45,6 +97,10 @@ nav a {
   display: flex;
   flex-direction: column;
   margin-right: 1em;
+}
+
+.fruit-trees-nav :hover {
+  color: white;
 }
 
 .fruit-trees-nav img {
@@ -73,7 +129,7 @@ nav a {
 /* End of flex container */
 
 .fruit-tree {
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 15px;
   text-align: center;
 }

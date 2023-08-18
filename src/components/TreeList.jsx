@@ -8,8 +8,8 @@ import FruitTreesNav from './FruitTreesNav'
 import icon from '../assets/tree-icon.png'
 
 export default function TreeList() {
-    const { bTrees } = useLoaderData()
-    const [trees, setTrees] = useState([])
+    const { allTrees, bTrees } = useLoaderData()
+    const [trees, setTrees] = useState(allTrees)
 
     //------- for Bookmarking ------//
     const [bookmarkedTrees, setBookmarkedTrees] = useState(bTrees)
