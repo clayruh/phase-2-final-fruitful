@@ -1,82 +1,84 @@
 {
   "trees": [
     {
-      "id": 1,
-      "tree_id": 1,
-      "spc_common": "mulberry",
-      "address": "130 WEST 57 STREET",
-      "boroname": "Manhattan"
+      "spc_common": "serviceberry",
+      "latitude": "40.74386485",
+      "longitude": "-73.97976635",
+      "address": "446 3 AVENUE",
+      "boroname": "Manhattan",
+      "id": 5
     },
     {
-      "created_at": "08/26/2015",
-      "tree_id": "176844",
-      "block_id": "105422",
-      "the_geom": {
-        "type": "Point",
-        "coordinates": [
-          -73.97747186405725,
-          40.740092918413076
-        ]
-      },
-      "tree_dbh": "13",
-      "stump_diam": "0",
-      "curb_loc": "OnCurb",
-      "status": "Alive",
-      "health": "Good",
-      "spc_latin": "Morus",
-      "spc_common": "mulberry",
-      "steward": "None",
-      "guards": "None",
-      "sidewalk": "NoDamage",
-      "user_type": "Volunteer",
-      "problems": "None",
-      "root_stone": "No",
-      "root_grate": "No",
-      "root_other": "No",
-      "trnk_wire": "No",
-      "trnk_light": "No",
-      "trnk_other": "No",
-      "brnch_ligh": "No",
-      "brnch_shoe": "No",
-      "brnch_othe": "No",
-      "address": "340 EAST 28 STREET",
-      "zipcode": "10016",
-      "zip_city": "New York",
-      "cb_num": "106",
-      "borocode": "1",
+      "spc_common": "crab apple",
+      "latitude": "40.75644952",
+      "longitude": "-73.96631455",
+      "address": "317 EAST 53 STREET",
       "boroname": "Manhattan",
-      "cncldist": "2",
-      "st_assem": "74",
-      "st_senate": "27",
-      "nta": "MN20",
-      "nta_name": "Murray Hill-Kips Bay",
-      "boro_ct": "1006600",
-      "state": "New York",
-      "latitude": "40.74009292",
-      "longitude": "-73.97747186",
-      "x_sp": "990492.863487",
-      "y_sp": "208913.222971",
-      "id": 2
+      "id": 6
     },
     {
       "spc_common": "serviceberry",
-      "latitude": "40.73277988",
-      "longitude": "-73.98201428",
-      "id": 3
+      "latitude": "40.71724372",
+      "longitude": "-73.89199441",
+      "address": "67-025 61 DRIVE",
+      "boroname": "Queens",
+      "id": 7
     },
     {
-      "spc_common": "ginkgo",
-      "latitude": "40.73769447",
-      "longitude": "-73.9782263",
-      "address": "345 EAST 24 STREET",
-      "id": 4
+      "spc_common": "mulberry",
+      "latitude": "40.72867759",
+      "longitude": "-73.87431283",
+      "address": "60-033 85 STREET",
+      "boroname": "Queens",
+      "id": 8
     },
     {
-      "spc_common": "ginkgo",
-      "latitude": "40.74633723",
-      "longitude": "-73.974891",
-      "address": "659 2 AVENUE",
-      "id": 5
+      "spc_common": "mulberry",
+      "latitude": "40.67373028",
+      "longitude": "-73.77703497",
+      "address": "133-019 161 STREET",
+      "boroname": "Queens",
+      "id": 9
+    },
+    {
+      "spc_common": "mulberry",
+      "latitude": "40.66895003",
+      "longitude": "-73.89034122",
+      "address": "468 MILLER AVENUE",
+      "boroname": "Brooklyn",
+      "id": 10
+    },
+    {
+      "spc_common": "mulberry",
+      "latitude": "40.85756824",
+      "longitude": "-73.79016795",
+      "address": "175 TERRACE STREET",
+      "boroname": "Bronx",
+      "id": 11
+    },
+    {
+      "spc_common": "mulberry",
+      "latitude": "40.72024245",
+      "longitude": "-73.90521782",
+      "address": "60-068 FLUSHING AVENUE",
+      "boroname": "Queens",
+      "id": 12
+    },
+    {
+      "spc_common": "hawthorn",
+      "latitude": "40.75412657",
+      "longitude": "-73.91749089",
+      "address": "44-033 NORTHERN BOULEVARD",
+      "boroname": "Queens",
+      "id": 13
+    },
+    {
+      "spc_common": "serviceberry",
+      "latitude": "40.73456479",
+      "longitude": "-73.88002194",
+      "address": "85-031 53 AVENUE",
+      "boroname": "Queens",
+      "id": 15
     }
   ]
 }

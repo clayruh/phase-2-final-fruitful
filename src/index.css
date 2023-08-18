@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
 .link {
@@ -26,17 +22,6 @@ nav a {
   padding: 2em;
 }
 
-img {
-  height: 100px;
-  padding: 1em;
-  filter: grayscale(100%);
-}
-
-img:hover {
-  filter: none;
-  transition: 0.2s;
-}
-
 .main-header h1 {
   text-align: center;
 }
@@ -52,12 +37,34 @@ img:hover {
 .find-container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .fruit-trees-nav {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  margin-right: 1em;
+}
+
+.fruit-trees-nav img {
+  height: 80px;
+  padding-top: 20px;
+  filter: grayscale(100%);
+}
+
+.fruit-trees-nav img:hover {
+  filter: none;
+  transition: 0.2s;
+}
+
+.fruit-trees-nav h4 {
+  margin-top: 5px;
+  margin-bottom: 1em;
+}
+
+.fruit-tree {
+  margin-bottom: 1em;
 }
 
 .map-and-bookmarks {
@@ -71,15 +78,30 @@ img:hover {
   text-align: center;
 }
 
-.bookmark :hover {
+/* Marker & Popups in leaflet map */
+.popup-bookmark :hover {
   color: rgb(140, 43, 14)!important;
+}
+/* End of leaflet map container */
+
+/* Bookmarked Trees List */
+.my-trees {
+  margin: 0 1em 1em 1em;
+}
+
+.my-trees h2 {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .bookmarked-tree {
   display: flex;
+  width: 250px;
+  margin: 10px;
 }
 
 .bookmarked-tree-icon {
   width: 50px;
   height: auto;
+  padding: 20px 20px 0 0;
 }

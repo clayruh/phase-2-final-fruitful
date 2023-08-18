@@ -23,6 +23,12 @@ export async function getTrees() {
     return { mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees, bTrees }
 }
 
+export async function getBookmarkedTrees() {
+    const bookmarkedTreesRes = await fetch('http://localhost:3000/trees')
+    const bTrees = await bookmarkedTreesRes.json()
+    return { bTrees }
+}
+
 // const treeName = ["mulberry", "ginkgo", "serviceberry", "crab apple", "hawthorn"]
 
 // function fetchTrees() { (tree) => {

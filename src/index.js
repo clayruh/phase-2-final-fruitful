@@ -5,10 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // COMPONENTS //
 import App from './components/App';
-import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import TreeList from './components/TreeList';
-import MyTrees from './components/BookmarkedTree';
+import MyTrees from './components/MyTrees';
 
 // LOADERS //
 import { getTrees, getBookmarkedTrees } from './loaders'
@@ -17,7 +16,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <ErrorPage />,
     children: [
       // children components of App that will show up in Outlet
       {
@@ -29,10 +27,11 @@ const router = createBrowserRouter([
         element: <TreeList />,
         loader: getTrees
       },
-      // {
-      //   path: "my-trees",
-      //   element: <MyTrees />,
-      // }
+      {
+        path: "my-trees",
+        element: <MyTrees />,
+        loader: getBookmarkedTrees
+      }
     ]
   }
 ])

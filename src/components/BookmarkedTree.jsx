@@ -1,26 +1,36 @@
 import tree from '../assets/reg tree.png'
 
-export default function BookmarkedTree({bookmarkedTrees}) {
+export default function BookmarkedTree({ bookmarkedTrees, setBookmarkedTrees }) {
 
-    const handleRemoveBookmark = (treeObj) => {
-        console.log('removed', treeObj)
+    function deleteBookmark(deletedTree) {
+        const filteredTrees = bookmarkedTrees.filter( tree => tree.id !== deletedTree.id )
+        setBookmarkedTrees(filteredTrees)
     }
+
+    function handleRemoveBookmark(treeObj) {
+        const OPTIONS = {method: 'DELETE'}
+        fetch(`http://localhost:3000/trees/${treeObj.id}`, OPTIONS)
+        .then(res => res.json())
+        .then(() => deleteBookmark(treeObj))
+    } 
 
     return(
         <div className="my-trees">
             <h2>Bookmarked Trees</h2>
-            {bookmarkedTrees.map(treeObj => (
-                <div key={treeObj.id} className="bookmarked-tree">
-                    <div>
-                        <img src={tree} alt="tree icon" className="bookmarked-tree-icon"></img>
+            <div className="bookmark-trees-container">
+                {bookmarkedTrees.map(treeObj => (
+                    <div key={treeObj.id} className="bookmarked-tree">
+                        <div>
+                            <img src={tree} alt="tree icon" className="bookmarked-tree-icon"></img>
+                        </div>
+                        <div>
+                            <h3>{treeObj.spc_common} tree</h3>
+                            <p>{treeObj.address}, {treeObj.boroname}</p>
+                        </div>
+                        <button onClick={() => handleRemoveBookmark(treeObj)}>remove</button>
                     </div>
-                    <div>
-                        <h3>{treeObj.spc_common}</h3>
-                        <p>{treeObj.address}, {treeObj.boroname}</p>
-                    </div>
-                    <button onClick={() => handleRemoveBookmark}>remove</button>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }
