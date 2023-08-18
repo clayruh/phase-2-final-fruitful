@@ -1,0 +1,2 @@
+# Redirect all paths to index.html, because we're deploying a single-page app.
+/*          /index.html             200
