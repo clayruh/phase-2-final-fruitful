@@ -9,7 +9,7 @@ export default function BookmarkedTree({ bookmarkedTrees, setBookmarkedTrees }) 
 
     function handleRemoveBookmark(treeObj) {
         const OPTIONS = {method: 'DELETE'}
-        fetch(`http://localhost:3000/trees/${treeObj.id}`, OPTIONS)
+        fetch(`${process.env.REACT_APP_JSON_SERVER_URL}/${treeObj.id}`, OPTIONS)
         .then(res => res.json())
         .then(() => deleteBookmark(treeObj))
     } 

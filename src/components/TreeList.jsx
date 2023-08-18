@@ -32,7 +32,7 @@ export default function TreeList() {
                 boroname: treeObj.boroname,
             })
         }
-        fetch('http://localhost:3000/trees', OPTIONS)
+        fetch(process.env.REACT_APP_JSON_SERVER_URL, OPTIONS)
         .then(res => res.json())
         .then(newTree => addBookmarkedTree(newTree))
     }

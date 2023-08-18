@@ -21,6 +21,19 @@ a {
   font-weight: 400;
 }
 
+button {
+  color: black;
+  background-color: #C1FF72;
+  border: 1.5px solid;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: .5s;
+}
+
 .link {
   text-decoration: none;
   color: black;
@@ -135,19 +148,34 @@ nav a {
 }
 
 /* Marker & Popups in leaflet map */
+.popup-tree h3 {
+  margin: 0 0 5px 0;
+}
+
 .popup-bookmark :hover {
-  color: rgb(140, 43, 14)!important;
+  color: #00BF63;
 }
 /* End of leaflet map container */
 
 /* Bookmarked Trees List */
 .my-trees {
   margin: 0 1em 1em 1em;
+  border: dotted;
 }
 
 .my-trees h2 {
   text-align: center;
-  margin-top: 0px;
+  margin: 1em 0 0 0;
+}
+
+.my-trees h3 {
+  font-size: 1em;
+  margin: 10px 0 0 0;
+}
+
+.my-trees p {
+  font-weight: 400;
+  margin: 0 0 10px 0;
 }
 
 .bookmarked-tree {

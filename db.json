@@ -1,52 +1,12 @@
 {
   "trees": [
     {
-      "spc_common": "serviceberry",
-      "latitude": "40.74386485",
-      "longitude": "-73.97976635",
-      "address": "446 3 AVENUE",
-      "boroname": "Manhattan",
-      "id": 5
-    },
-    {
-      "spc_common": "crab apple",
-      "latitude": "40.75644952",
-      "longitude": "-73.96631455",
-      "address": "317 EAST 53 STREET",
-      "boroname": "Manhattan",
-      "id": 6
-    },
-    {
-      "spc_common": "serviceberry",
-      "latitude": "40.71724372",
-      "longitude": "-73.89199441",
-      "address": "67-025 61 DRIVE",
-      "boroname": "Queens",
-      "id": 7
-    },
-    {
       "spc_common": "mulberry",
       "latitude": "40.72867759",
       "longitude": "-73.87431283",
       "address": "60-033 85 STREET",
       "boroname": "Queens",
       "id": 8
-    },
-    {
-      "spc_common": "mulberry",
-      "latitude": "40.67373028",
-      "longitude": "-73.77703497",
-      "address": "133-019 161 STREET",
-      "boroname": "Queens",
-      "id": 9
-    },
-    {
-      "spc_common": "mulberry",
-      "latitude": "40.66895003",
-      "longitude": "-73.89034122",
-      "address": "468 MILLER AVENUE",
-      "boroname": "Brooklyn",
-      "id": 10
     },
     {
       "spc_common": "mulberry",
@@ -65,20 +25,12 @@
       "id": 12
     },
     {
-      "spc_common": "hawthorn",
-      "latitude": "40.75412657",
-      "longitude": "-73.91749089",
-      "address": "44-033 NORTHERN BOULEVARD",
+      "spc_common": "mulberry",
+      "latitude": "40.73830204",
+      "longitude": "-73.89210194",
+      "address": "47-019 72 STREET",
       "boroname": "Queens",
       "id": 13
-    },
-    {
-      "spc_common": "serviceberry",
-      "latitude": "40.73456479",
-      "longitude": "-73.88002194",
-      "address": "85-031 53 AVENUE",
-      "boroname": "Queens",
-      "id": 15
     }
   ]
 }

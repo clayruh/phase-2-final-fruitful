@@ -20,14 +20,14 @@ export async function getTrees() {
     const hackberryResponse = await fetch('https://data.cityofnewyork.us/resource/5rq2-4hqu.json?spc_common=common%20hackberry')
     const hackberryTrees = await hackberryResponse.json()
 
-    const bookmarkedTreesRes = await fetch('http://localhost:3000/trees')
+    const bookmarkedTreesRes = await fetch(process.env.REACT_APP_JSON_SERVER_URL)
     const bTrees = await bookmarkedTreesRes.json()
 
     return { allTrees, mulberryTrees, ginkgoTrees, serviceberryTrees, hawthornTrees, crabappleTrees, hackberryTrees, bTrees }
 }
 
 export async function getBookmarkedTrees() {
-    const bookmarkedTreesRes = await fetch('http://localhost:3000/trees')
+    const bookmarkedTreesRes = await fetch(process.env.REACT_APP_JSON_SERVER_URL)
     const bTrees = await bookmarkedTreesRes.json()
     return { bTrees }
 }
