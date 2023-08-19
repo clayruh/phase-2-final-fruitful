@@ -11,7 +11,7 @@ export default function Home() {
             <div className="created-by">
                 <img src={headshot} alt="Clae squatting and making a peace sign pose in front of red rocks"></img>
                 <h4>
-                    Made by Clae Lu, a forager who loves to stare at fruiting trees or pick random plants on the sidewalk. Fruitful was created using React Router and <a href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35" target="_blank">NYC Open Data's API</a>.
+                    Made by Clae Lu, a forager who loves to stare at fruiting trees or pick random plants on the sidewalk. Fruitful was created using React Router and <a href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35" target="_blank" rel="noreferrer">NYC Open Data's API</a>.
                 </h4>
             </div>
         </div>
