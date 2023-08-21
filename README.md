@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+![fruit(ful) homepage](/public/fruit(ful)-homepage.png "fruit(ful) homepage") 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Website
 
-## Available Scripts
+Check out fruit(ful) here: https://main--thriving-gelato-ac96ff.netlify.app/
 
-In the project directory, you can run:
+The back end is hosted on Render, so it may take a minute or so for the server to boot up. If you still see a loading screen, refresh the page and everything should work fine.
 
-### `npm start`
+# Features
+## Finding Fruit Trees
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![using the map to find fruit trees gif](/public/homepage.gif)
+The 'Find Fruit Trees' page allows you to see all of the fruit trees managed by the NYC Parks Department, filtered by the fruit trees navigation on the left hand side. Clicking different types will load all of those trees into the Leaflet map.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Bookmarking Trees
 
-### `npm test`
+![how to bookmark a tree gif](/public/bookmarking.gif)
+On the right hand side is a 'Bookmarked Trees' box where you can keep track of trees that you'd like to bookmark. When a tree icon is clicked on in the map, you have the option to bookmark it in the Leaflet popup. You can also remove bookmarked trees by clicking the 'remove' button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## My Trees
 
-### `npm run build`
+![viewing personal bookmarked trees gif](/public/mytrees.gif)
+The 'My Trees' page allows you to see all of your bookmarked trees in one place. With more time, I'd like to have the 'Bookmarked Trees' list show here as well, as well as some other options to create a route with the trees, and allow you to route your current location to a specific tree.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was inspired by my own foraging experience growing up in NYC with an immigrant mother. She and I would go on walks and I learned so much about identifying plants, fruits, vegetables, and a general appreciation for food thanks to her. As a born-and-bred New Yorker, I often forget that this dense city is also its own forest and habitat, and paying attention to nature through foraging helps remind me of that connection to the land. I love seeing mulberries when they're in season as well as all kinds of other fruiting trees, persimmons, figs, etc. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I hope you also enjoy perusing the fruit trees in your neighborhoods or routes, and this site helps you slow down to appreciate the ecosystem that is NYC/ Lenapehoking. 
 
-### `npm run eject`
+## Technology Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* NYC Open Data API: https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35
+* Javascript
+* React
+* React Leaflet
+* Node 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Hat tip to Chett + Sakib at Flatiron for helping me out with all the bumps I hit along the way in creating this project! 
+* And to my fellow cohort classmates who kept me motivated and helped me solve problems along the way.
