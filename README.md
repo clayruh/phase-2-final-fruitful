@@ -21,7 +21,7 @@ On the right hand side is a 'Bookmarked Trees' box where you can keep track of t
 
 ### My Trees
 
-![viewing personal bookmarked trees gif](/public/mytrees.gif)
+![viewing personal bookmarked trees gif](/public/my-trees.gif)
 
 The 'My Trees' page allows you to see all of your bookmarked trees in one place. With more time, I'd like to have the 'Bookmarked Trees' list show here as well, as well as some other options to create a route with the trees, and allow you to route your current location to a specific tree.
 
