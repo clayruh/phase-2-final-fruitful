@@ -2,7 +2,7 @@
 
 ![fruit(ful) homepage](/public/fruit(ful)-homepage.png "fruit(ful) homepage")
 
-Check out fruit(ful) here: https://main--thriving-gelato-ac96ff.netlify.app/
+Check out fruit(ful) here: https://main--fruit-ful.netlify.app/
 
 The back end is hosted on Render, so it may take a minute or so for the server to boot up. If you still see a loading screen, refresh the page and everything should work fine.
 
